@@ -1,0 +1,119 @@
+
+{{ mydate | date:'longTime' }}
+<br>
+{{ 7.8 | percent }}
+
+{{ 23.56 | currency:'INR' }} <br>
+
+{{ 2.587 | number:'3.1-2' }} <br>
+
+{{ employee.details | json }} <br>
+{{ textData | slice:2:9 }}  <br>
+{{ textData | titlecase }} <br>
+{{ textData | lowercase }} <br>
+{{ textData | uppercase }} <br>
+{{ textData }}
+
+<hr>
+
+<div [ngSwitch]="valueForData">
+    <div *ngSwitchCase="true">
+        This is ONE!
+    </div>
+    <div *ngSwitchCase="false">
+        This is TWO!
+    </div>
+    <div *ngSwitchDefault>
+        No matching number!
+    </div>
+</div>
+
+<hr>
+
+<input type="text" [(ngModel)]="valueForData" >
+
+<span [ngSwitch]="valueForData">
+    <p *ngSwitchCase="true">
+        This is ONE!
+    </p>
+    <p *ngSwitchCase="false">
+        This is TWO!
+    </p>
+    <p *ngSwitchDefault>
+        No matching number!
+    </p>
+</span>
+
+
+<div *ngFor="let x of dataNames; even as i">
+        {{i}} - {{x}}
+</div>
+
+<hr>
+
+
+<input type="text" [(ngModel)]="name">
+
+<span [ngSwitch]="name">
+    <p *ngSwitchCase="'Tom'">
+        This is Tom!
+    </p>
+    <p *ngSwitchCase="'Ken'">
+        This is ken!
+    </p>
+    <p *ngSwitchDefault>
+        No data matching!
+    </p>
+</span>
+
+
+
+<hr>
+
+<input type="text" [(ngModel)]="valueForData" />
+<br>
+
+<div *ngIf="((valueForData > 5) && isShown); then trueBlock; else elblock">
+    
+</div>
+
+<ng-template #trueBlock>
+    <div>
+        This is sample text...!
+    </div>
+</ng-template>
+
+<ng-template #elblock>
+    <div>
+        Else block
+    </div>
+</ng-template>
+
+
+
+
+<hr>
+
+<input type="text" [(ngModel)]="myData" >
+
+<br>
+
+{{ myData }}
+
+
+<br>
+<br>
+
+
+<div>
+    {{currentData}}
+</div>
+<br/>
+
+
+<input  type="text" value="Sample text!" #myinputtext />
+<br>
+
+<button (click)="readText(myinputtext)"  >Sample Click</button>
+
+<button  (click) = "clickMe()"  >Click Me!</button>

@@ -1,0 +1,52 @@
+
+<!-- <div [style.color]="(a>3)? 'red': 'blue' " > -->
+
+<div [ngStyle] = "allClasses">
+      Style binding
+</div>
+
+<br />
+
+<div [ngClass] = "myClasses">
+    This is my sample line!
+</div>
+
+<div style="color:red;font:500;font-style: italic">
+      sample.....
+</div>
+
+
+
+<div [class]="(a > 3 && b < 100) ? 'mydiv-error' : 'mydiv-success'">
+    This is a statement!
+</div>
+
+<div>
+
+    <input type="text" value="hey" [id]="myId" />
+    <input [type]="myInputType" value="Control" />
+
+</div>
+
+<div>
+    {{ a + b + "800" }}
+    <!-- {{ a = 10 + 89 }} -->
+</div>
+<p>
+  home works!
+</p>
+<div>
+    Welcome, {{ name }}
+  <br>
+    {{ 2 + 2 }}
+
+    <br>
+
+    {{ "Hello" + ", World" }} {{ name }}
+
+    <br>
+    {{ getData() }}
+    <br>
+    {{ myData.name }}
+
+</div>

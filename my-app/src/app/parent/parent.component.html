@@ -1,0 +1,17 @@
+<p>
+  parent works!
+</p>
+
+<input type="text" [(ngModel)]="data" />
+
+<br />
+
+{{ cMessage }}
+
+<hr />
+
+<app-child
+  (childMessage)="cMessage = $event"
+  [parentData]="data"
+  [parentEmployee]="employee"
+></app-child>
