@@ -1,3 +1,16 @@
 <p>
-  studentlist works!
+  Studentlist works!
 </p>
+<ul>
+  <li *ngFor="let item of commonService.getStudents()">
+    <a href="studentdetails/{{ item.id }}">{{ item.name + " " + item.id }}</a>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of commonService.getStudents()">
+    <div (click)="onStudentSelected(item.id)" style="cursor: pointer;">
+      {{ item.name }}
+    </div>
+  </li>
+</ul>

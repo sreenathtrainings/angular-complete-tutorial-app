@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { commonService } from '../commonService';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-studentlist',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentlistComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public commonService: commonService,
+    private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onStudentSelected(id: number) {
+    this.router.navigate(['studentdetails', id]);
   }
 
 }
